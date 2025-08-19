@@ -1,9 +1,12 @@
 function Header({ setSearchedMovie }) {
   return (
     <div className="Header">
-      <h1>🍯MovieHive</h1>
+      <h1>
+        <img className="icon" src="./honey.png" alt="asgasd"/> 
+        MovieHive
+        </h1>
       <SearchBar setSearchedMovie={setSearchedMovie}/>
-      <ResaultCount/>
+      <Profile/>
     </div>
   )
 }
@@ -18,11 +21,12 @@ function SearchBar({ setSearchedMovie }) {
     }}/>
   );
 }
-function ResaultCount() {
+function Profile() {
   return (
-    <div className="ResaultCount">
-      <p>Found 10 results</p>
-    </div>
+      <div className="Profile">
+        <img src="./default-profile.png"/>
+        <p>IremArda</p>
+      </div>
   );
 }
 

@@ -8,7 +8,11 @@ function Movie({ title, year, poster, setIsAbout, isAbout, imdbID }) {
       isAbout ? setIsAbout('') : setIsAbout(imdbID)
     }}
     > 
-        <img src={poster} alt='annen'/>
+        <img 
+          src={poster} 
+          alt=''
+          onError={(e) => e.target.src = "./placeholder.jpg"} 
+        />
         
         <div className='about-movie'>
             <h3>{title}</h3>
